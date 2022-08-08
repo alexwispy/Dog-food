@@ -3,9 +3,9 @@ import {Link} from 'react-router-dom';
 import Logo from '../Logo';
 import './index.css';
 import Search from "../Search";
-import icFav from "../../components/assets/like_stroke.svg";
-import icProf from "../../components/assets/profile.svg";
-import { UserCtx } from '../../context/UserContext';
+import icFav from "../../assets/like_stroke.svg";
+import icProf from "../../assets/profile.svg";
+import { UserCtx } from "../../context/UserContext";
 
 const Header = ({searchText, changeText}) => {
     const { user } = useContext(UserCtx);
@@ -29,5 +29,3 @@ const Header = ({searchText, changeText}) => {
 }
 
 export default Header;
-
-

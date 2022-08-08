@@ -1,7 +1,7 @@
 import React from "react";
 import Banner from "../Banner";
 
-const BannerContainer = ({ cards }) => {
+const BannerContainer = ({cards}) => {
     const st = {
         display: "grid",
         gridTemplateColumns: `repeat(${cards.length}, 1fr)`,
@@ -9,7 +9,7 @@ const BannerContainer = ({ cards }) => {
     }
     return (
         <div style={st}>
-            {cards.map(el => <Banner data={el} size={cards.length} key={el.name} />)}
+            {cards.map(el => <Banner data={el} size={cards.length} key={el.name}/>)}
         </div>
     )
 }

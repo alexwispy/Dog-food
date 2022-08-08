@@ -43,7 +43,7 @@ class Api {
 
 const config = {
     path: "https://api.react-learning.ru",
-    token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjJmOTk5MmFlNWM0MGMxMGMxMWRmZTQiLCJpYXQiOjE2NDcyODY2ODEsImV4cCI6MTY3ODgyMjY4MX0.WHKXAErKZtY445yXecOFZsx981MuXicJti-okSY-tac"
+//     token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmYxNzBhOTZhYTE5MTA0MzI4Mjg2NTQiLCJpYXQiOjE2NTk5OTAyMjUsImV4cCI6MTY5MTUyNjIyNX0.1WZll_Zk0wDMzt0r5qlusI45jGp5JAt2DzEQhIfk7Jk"
 }
 
 const api = new Api(config);

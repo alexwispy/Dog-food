@@ -1,21 +1,32 @@
-import React, {useState} from "react";
-import { Link } from "react-router-dom";
+import React, {useState, useContext} from "react";
+import { Link, useNavigate } from "react-router-dom";
 import "./index.css";
 import api from "../../Api";
-
+import { UserCtx } from "../../context/UserContext";
 
 export default ({login}) => {
     const [val, changeVal] = useState("");
     const [pwd, changePwd] = useState("");
+    const { setUser, setToken } = useContext(UserCtx);
+    const navigation = useNavigate();
     const handler = (e) => {
         e.preventDefault();
         if (login) {
             api.login({email: val, password: pwd}).then(ans => {
                 console.log(ans);
+                if (ans.data) {
+                    setUser(ans.data._id);
+                    setToken(ans.token);
+                }
+                navigation("/");
             })
         } else {
+            console.log(val);
             api.signup({email: val, password: pwd}).then(ans => {
-                console.log(ans);
+                // console.log(ans);
+                // if (ans._id || ans.err.statusCode === 409) {
+                    navigation("/signin");
+                // }
             })
         }
     }

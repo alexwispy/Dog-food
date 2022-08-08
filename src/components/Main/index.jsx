@@ -1,14 +1,14 @@
 import React from "react";
 import "./index.css";
-import {Routes, Route, Switch} from 'react-router-dom';
+import {Routes, Route} from 'react-router-dom';
 import Home from '../../pages/Home';
 import Catalog from '../../pages/Catalog';
 import Cart from '../../pages/Cart';
 import Product from "../../pages/Product";
 import Favorites from "../../pages/Favorites";
 import Profile from "../../pages/Profile";
-import Singin from "../../pages/Singin";
-import Singup from "../../pages/Singup";
+import Signin from "../../pages/Signin";
+import Signup from "../../pages/Signup";
 
 const Main = ({search}) => {
     return (
@@ -20,8 +20,8 @@ const Main = ({search}) => {
                 <Route path="/product/:id" element={<Product/>}/>
                 <Route path="/favorites" element={<Favorites/>}/>
                 <Route path="/profile" element={<Profile/>}/>
-                <Route path="/singin" element={<Singin/>}/>
-                <Route path="/singup" element={<Singup/>}/>
+                <Route path="/signin" element={<Signin/>}/>
+                <Route path="/signup" element={<Signup/>}/>
             </Routes>
         </main>
     )

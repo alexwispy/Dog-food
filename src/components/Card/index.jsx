@@ -4,12 +4,12 @@ import pic from "./img/logo.svg";
 
 const Card = (props) => {
     let st = {
-        backgroundImage: `url(${props.pic || pic})`,
+        backgroundImage: `url(${pic || props.pic})`,
         backgroundSize: "contain",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         backgroundColor: "#fff",
-        marginBottom: "20px",
+        marginBottom: "20px"
     };
     return (
         <div className="card">
